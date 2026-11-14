@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multiverse City — Case Study | Ayush Naik</title>
+    <meta name="description" content="A case study of Multiverse City — a local-commerce and services ecosystem built by Ayush Naik: the problem, the modules, the stack, and an honest status of what is live, built and planned.">
+    <meta name="author" content="Ayush Naik">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ayush007naik.github.io/work/multiverse-city.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://ayush007naik.github.io/work/multiverse-city.html">
+    <meta property="og:title" content="Multiverse City — Case Study | Ayush Naik">
+    <meta property="og:description" content="One city, many products: how I built a local-commerce and services ecosystem with Flutter, Supabase and Firebase — and what is actually live.">
+    <meta property="og:image" content="https://ayush007naik.github.io/assets/og-cover.jpg">
+    <meta property="og:site_name" content="Ayush Naik">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Multiverse City — Case Study | Ayush Naik">
+    <meta name="twitter:description" content="One city, many products: a local-commerce and services ecosystem built with Flutter, Supabase and Firebase.">
+    <meta name="twitter:image" content="https://ayush007naik.github.io/assets/og-cover.jpg">
+
+    <meta name="theme-color" content="#070708">
+    <meta name="color-scheme" content="dark">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" href="../assets/icons/icon-180.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Multiverse City — Case Study",
+        "description": "A local-commerce and services ecosystem built by Ayush Naik. The problem, modules, stack and honest status.",
+        "author": {
+            "@type": "Person",
+            "name": "Ayush Naik",
+            "url": "https://ayush007naik.github.io/"
+        },
+        "about": {
+            "@type": "Organization",
+            "name": "Multiverse City",
+            "url": "https://multiversecity.com"
+        },
+        "url": "https://ayush007naik.github.io/work/multiverse-city.html"
+    }
+    </script>
+</head>
+<body class="case-study">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-github" viewBox="0 0 24 24"><path style="fill:currentColor;stroke:none" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 5.7L20.5 7"/></symbol>
+        <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></symbol>
+        <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+    </svg>
+
+    <div class="page-grid" aria-hidden="true"></div>
+    <div class="page-glow" aria-hidden="true"><i></i><i></i></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="case-header">
+        <div class="container case-header-inner">
+            <a class="brand" href="../index.html#top">
+                <span class="brand-mark" aria-hidden="true">AN</span>
+                <span class="brand-name">Ayush Naik</span>
+            </a>
+            <div class="case-header-links">
+                <a class="case-back" href="../index.html#work">
+                    <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+                    All work
+                </a>
+                <a class="btn btn-primary btn-small" href="../resume.pdf" download="Ayush_Naik_Resume.pdf">
+                    <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+                    Résumé
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="cs-hero">
+            <div class="container">
+                <p class="section-eyebrow">Case study — 01</p>
+                <h1 class="cs-title">One city.<br><em>Many products.</em></h1>
+                <p class="cs-lead">
+                    Multiverse City is a local-commerce and services ecosystem designed to connect
+                    customers with local businesses through one unified platform. I founded it and
+                    build the product, interfaces and backends — this page documents the problem,
+                    the decisions and the honest status of each module.
+                </p>
+
+                <dl class="cs-meta">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Founder &amp; Product Builder</dd>
+                    </div>
+                    <div>
+                        <dt>Timeline</dt>
+                        <dd>2026 — Present</dd>
+                    </div>
+                    <div>
+                        <dt>Platform</dt>
+                        <dd>Android · Web</dd>
+                    </div>
+                    <div>
+                        <dt>Status</dt>
+                        <dd><span class="cs-live-dot" aria-hidden="true"></span>Live on Google Play</dd>
+                    </div>
+                </dl>
+
+                <div class="cs-actions">
+                    <a class="btn btn-primary" href="https://multiversecity.com" target="_blank" rel="noopener noreferrer">
+                        Visit multiversecity.com
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                    </a>
+                    <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.ayush.multiverse.multiverses" target="_blank" rel="noopener noreferrer">
+                        Google Play
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                    </a>
+                    <a class="btn btn-ghost" href="https://github.com/ayush007naik/multiverse-app" target="_blank" rel="noopener noreferrer">
+                        Source
+                        <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                    </a>
+                </div>
+
+                <div class="cs-hero-visual reveal">
+                    <div class="cs-screen-grid">
+                        <figure class="cs-screen">
+                            <img src="../assets/work/mv-marketplace.webp" alt="Multiverse City marketplace screen showing product categories and listings" width="941" height="1672" loading="eager" decoding="async">
+                            <figcaption>Marketplace</figcaption>
+                        </figure>
+                        <figure class="cs-screen cs-screen-raised">
+                            <img src="../assets/work/mv-appointments.webp" alt="Multiverse City appointments screen for booking local services" width="941" height="1672" loading="eager" decoding="async">
+                            <figcaption>Appointments</figcaption>
+                        </figure>
+                        <figure class="cs-screen">
+                            <img src="../assets/work/mv-movies.webp" alt="Multiverse City theatre and movies screen showing showtimes" width="941" height="1672" loading="eager" decoding="async">
+                            <figcaption>Theatre &amp; movies</figcaption>
+                        </figure>
+                    </div>
+                    <p class="cs-caption">Product screens from the live Multiverse City app.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="problem-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">01 — The problem</p>
+                    <h2 id="problem-title">Local commerce is <em>fragmented.</em></h2>
+                    <p>Discovering and transacting with local businesses usually means jumping between shops, booking tools, listings and delivery apps. Each one owns a different slice of the same city.</p>
+                </div>
+
+                <div class="cs-grid-3">
+                    <article class="cs-card reveal">
+                        <span class="mono-label">The customer</span>
+                        <h3>Too many places to look</h3>
+                        <p>A customer who wants to shop, book an appointment and find a showtime has to use separate products with separate accounts and separate expectations.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <span class="mono-label">The business</span>
+                        <h3>No shared workflows</h3>
+                        <p>Local vendors and service providers need digital storefronts, bookings and order management — but rarely have the tooling to run all of it in one place.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <span class="mono-label">The thesis</span>
+                        <h3>One city, one surface</h3>
+                        <p>Make local discovery and transactions feel as easy as a single super-app, while giving businesses shared dashboards instead of disconnected tools.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="ecosystem-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">02 — The ecosystem</p>
+                    <h2 id="ecosystem-title">Modules, with <em>honest labels.</em></h2>
+                    <p>The platform is wider than the live app. Each module below is marked as Live, Built or Planned — no module is presented as shipped before it is.</p>
+                </div>
+
+                <div class="cs-table-wrap reveal">
+                    <table class="cs-table">
+                        <caption class="sr-only">Multiverse City modules and their current status</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Module</th>
+                                <th scope="col">What it does</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Customer app</th>
+                                <td>The primary Android experience for discovery, bookings and transactions.</td>
+                                <td><span class="status is-live">Live</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Marketplace</th>
+                                <td>Product catalogue and local shopping flows.</td>
+                                <td><span class="status is-live">Live</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Appointments</th>
+                                <td>Booking local services and scheduling slots.</td>
+                                <td><span class="status is-live">Live</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Real estate</th>
+                                <td>Local property listings and discovery.</td>
+                                <td><span class="status is-live">Live</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Theatre &amp; movies</th>
+                                <td>Showtimes and cinema listings inside the same app.</td>
+                                <td><span class="status is-live">Live</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Vendor app</th>
+                                <td>A separate surface for businesses to manage their presence and orders.</td>
+                                <td><span class="status is-built">Built</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Delivery partner app</th>
+                                <td>A companion app for delivery workflows.</td>
+                                <td><span class="status is-built">Built</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Delivery services</th>
+                                <td>End-to-end local delivery ordering and fulfilment.</td>
+                                <td><span class="status is-planned">Planned</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cabs</th>
+                                <td>Local cab booking within the ecosystem.</td>
+                                <td><span class="status is-planned">Planned</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cs-status-legend reveal">
+                    <span><i class="status is-live">Live</i> usable today</span>
+                    <span><i class="status is-built">Built</i> implemented, not publicly launched</span>
+                    <span><i class="status is-planned">Planned</i> designed, not built</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="decisions-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">03 — Key decisions</p>
+                    <h2 id="decisions-title">Build the <em>ecosystem,</em> not a demo.</h2>
+                    <p>The constraint was simple: one person, limited time, and a product surface wide enough for a whole city. These were the decisions that made that possible.</p>
+                </div>
+
+                <div class="cs-grid-2">
+                    <article class="cs-card reveal">
+                        <span class="cs-num">01</span>
+                        <h3>Shared backend over separate apps</h3>
+                        <p>Every module reads and writes to shared Supabase and Firebase projects. That keeps identity, data and state consistent while each app stays focused on its own workflow.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <span class="cs-num">02</span>
+                        <h3>AI-assisted execution, human decisions</h3>
+                        <p>I use AI-assisted development to move quickly through implementation and iteration. Product scope, data models and what gets shipped are still deliberate decisions, not generated ones.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <span class="cs-num">03</span>
+                        <h3>Ship the customer app first</h3>
+                        <p>The customer experience is the front door. Marketplace, appointments, real estate and entertainment went live inside it before expanding the operator surfaces.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 180ms">
+                        <span class="cs-num">04</span>
+                        <h3>Label everything honestly</h3>
+                        <p>Built is not the same as live. Planned is not the same as shipped. The product and this case study both use those labels so the scope is clear.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="build-title">
+            <div class="container">
+                <div class="cs-split">
+                    <div class="cs-split-copy">
+                        <div class="cs-section-head">
+                            <p class="section-eyebrow">04 — What I built</p>
+                            <h2 id="build-title">From roadmap to <em>running software.</em></h2>
+                            <p>I own the product direction and the build: shaping the module roadmap, designing the interfaces, setting up the backend, and shipping the web and Android surfaces.</p>
+                        </div>
+
+                        <ul class="cs-list">
+                            <li>Founded the product and defined the module roadmap across shopping, delivery, cabs, appointments, real estate and entertainment.</li>
+                            <li>Built and customised 6+ apps and 5+ websites using AI-assisted development workflows.</li>
+                            <li>Worked on product interfaces and user flows, plus Supabase and Firebase backend and database setup.</li>
+                            <li>Shipped the company website and the Android app, which is live on Google Play.</li>
+                        </ul>
+
+                        <div class="cs-stack">
+                            <span class="mono-label">Stack</span>
+                            <ul>
+                                <li>Flutter</li><li>Dart</li><li>Supabase</li><li>Firebase</li><li>Firestore</li><li>Cloud Functions</li><li>React</li><li>Vite</li><li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <aside class="cs-aside reveal">
+                        <span class="mono-label">At a glance</span>
+                        <dl class="cs-facts">
+                            <div><dt>Apps built</dt><dd>6+</dd></div>
+                            <div><dt>Websites shipped</dt><dd>5+</dd></div>
+                            <div><dt>Play Store apps</dt><dd>1</dd></div>
+                            <div><dt>Modules in ecosystem</dt><dd>9</dd></div>
+                        </dl>
+                        <p class="cs-aside-note">Counts reflect work across the Multiverse City ecosystem, not just the public app.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="status-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">05 — Status</p>
+                    <h2 id="status-title">What is true <em>today.</em></h2>
+                    <p>No revenue, user or growth metrics are claimed here. The platform is early, and this section reflects the current build state.</p>
+                </div>
+
+                <div class="cs-grid-3">
+                    <article class="cs-card cs-card-accent reveal">
+                        <span class="mono-label">Live now</span>
+                        <h3>Customer-facing surfaces</h3>
+                        <ul class="cs-mini-list">
+                            <li>Android app on Google Play</li>
+                            <li>Company website</li>
+                            <li>Marketplace, appointments, real estate and theatre modules</li>
+                        </ul>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <span class="mono-label">Built, not launched</span>
+                        <h3>Operator surfaces</h3>
+                        <ul class="cs-mini-list">
+                            <li>Vendor app</li>
+                            <li>Delivery partner app</li>
+                            <li>Supporting dashboards and workflows</li>
+                        </ul>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <span class="mono-label">Next</span>
+                        <h3>Still to prove</h3>
+                        <ul class="cs-mini-list">
+                            <li>Delivery fulfilment end to end</li>
+                            <li>Cab booking</li>
+                            <li>Validating the commercial model</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="lessons-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">06 — Lessons</p>
+                    <h2 id="lessons-title">What building a city <em>taught me.</em></h2>
+                </div>
+
+                <div class="cs-grid-2">
+                    <article class="cs-card reveal">
+                        <h3>Scope is a product decision</h3>
+                        <p>It is easy to design ten modules and hard to make one dependable. Shipping the customer app first forced prioritisation and made the roadmap real instead of theoretical.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <h3>Backends are where the seams show</h3>
+                        <p>Shared Supabase and Firebase foundations reduce duplication, but they also demand clear data ownership. The work is as much about models and permissions as it is about screens.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <h3>Speed needs a counterweight</h3>
+                        <p>AI-assisted workflows make implementation fast. The counterweight is verification — checking flows, links and claims before calling anything shipped.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 180ms">
+                        <h3>Credibility compounds</h3>
+                        <p>Clearly separating live, built and planned work is not just honest — it makes the product easier to explain to users, collaborators and anyone evaluating the engineering.</p>
+                    </article>
+                </div>
+
+                <div class="cs-cta reveal">
+                    <div>
+                        <span class="mono-label">Explore the product</span>
+                        <h3>See the live surfaces.</h3>
+                        <p>The website and Android app are the fastest way to judge the work.</p>
+                    </div>
+                    <div class="cs-cta-actions">
+                        <a class="btn btn-primary" href="https://multiversecity.com" target="_blank" rel="noopener noreferrer">
+                            multiversecity.com
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                        </a>
+                        <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.ayush.multiverse.multiverses" target="_blank" rel="noopener noreferrer">
+                            Google Play
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section cs-next" aria-labelledby="next-title">
+            <div class="container cs-next-inner">
+                <div>
+                    <p class="section-eyebrow">Next</p>
+                    <h2 id="next-title">Back to the <em>work.</em></h2>
+                    <p>More projects, the full experience timeline and an honest skills breakdown.</p>
+                </div>
+                <div class="cs-next-actions">
+                    <a class="btn btn-outline" href="../index.html#work">
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+                        All projects
+                    </a>
+                    <a class="btn btn-primary" href="../index.html#contact">
+                        Start a conversation
+                        <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-mark">AN</span>
+                <div>
+                    <p>Ayush Naik</p>
+                    <span>AI-assisted product builder · Founder of Multiverse City</span>
+                </div>
+            </div>
+            <p class="footer-note">Designed &amp; built by Ayush Naik. © <span id="year">2026</span></p>
+            <a class="back-to-top" href="#main" aria-label="Back to top">
+                Back to top
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+</html>

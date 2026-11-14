@@ -1,10 +1,7 @@
-
-<h1 align="center">👋 Ayush Naik — Personal Portfolio Website</h1>
-
-<h3 align="center">Task 1 | Personal Profile & Portfolio</h3>
+<h1 align="center">Ayush Naik — Portfolio</h1>
 
 <p align="center">
-  A responsive personal website introducing my background, skills, interests and projects.
+  AI-assisted product builder, aspiring full-stack engineer and founder of Multiverse City.
 </p>
 
 <p align="center">
@@ -18,50 +15,50 @@
 
 ---
 
-## 📌 Project Overview
+## Overview
 
-This project is my personal profile website, created to introduce myself, present my background and share information about my skills, interests and work.
+A single-page portfolio for Ayush Naik, built as a static site and deployed with GitHub Pages. It covers the work, skills, experience, education and contact details in one responsive, accessible page.
 
-It serves as a simple online presence where visitors can learn more about me and explore my projects.
+## Pages
 
-## 🎯 Objectives
+- **Home** — `index.html`: hero, about, selected work, skills, experience, education, milestones, résumé and contact.
+- **Case study** — `work/multiverse-city.html`: Multiverse City problem, ecosystem modules, decisions, stack and honest build status.
+- **Résumé** — `resume.html` / `resume.pdf`: one-page, recruiter-friendly PDF generated from the print-ready HTML source.
 
-- Build a personal website to introduce myself.
-- Present my academic background and interests.
-- Organize personal and professional information.
-- Create a responsive and accessible browsing experience.
-- Publish the website using GitHub Pages.
+## Stack
 
-## ✨ Key Features
+- Semantic HTML
+- Modern CSS (custom properties, grid, fluid type)
+- Vanilla JavaScript (navigation, scroll progress, reveal animations, copy email)
+- GitHub Pages
+- No build step
 
-- 👤 Personal introduction and profile
-- 🎓 Academic background
-- 💻 Skills and interests
-- 🚀 Projects and achievements
-- 📱 Responsive website layout
-- 🌐 Public deployment through GitHub Pages
+## Accessibility and performance
 
-## 🛠️ Technologies Used
+- Keyboard-friendly navigation and skip link
+- Reduced-motion support
+- Labelled form controls and landmarks
+- Lazy-loaded imagery and responsive assets
+- Honest project status labels: Live, Built, Planned
 
-- **HTML** — Page structure
-- **CSS** — Styling and layout
-- **JavaScript** — Interactive functionality
-- **GitHub Pages** — Website hosting
+## Local development
 
-## 🔗 Project Links
+```bash
+python3 -m http.server 4173
+```
 
-- **Live Website:** https://ayush007naik.github.io/
-- **GitHub Repository:** https://github.com/ayush007naik/ayush007naik.github.io
-- **LinkedIn:** https://linkedin.com/in/ayush-naik-3298b635b
+Then open <http://localhost:4173/>.
 
-## 👨‍💻 Author
+To regenerate the résumé PDF, print `resume.html` to A4 with background graphics enabled.
+
+## Links
+
+- **Live site:** <https://ayush007naik.github.io/>
+- **Repository:** <https://github.com/ayush007naik/ayush007naik.github.io>
+- **LinkedIn:** <https://linkedin.com/in/ayush-naik-3298b635b>
+
+## Author
 
 **Ayush Naik**  
 B.Tech Chemical Engineering  
 National Institute of Technology, Hamirpur
-
----
-
-<p align="center">
-  <b>My journey, skills and projects — all in one place.</b>
-</p>

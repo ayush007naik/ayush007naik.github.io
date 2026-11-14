@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush Naik — Résumé</title>
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Résumé of Ayush Naik — AI-assisted product builder and aspiring full-stack engineer.">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #17171d;
+    --muted: #55555f;
+    --dim: #666670;
+    --line: #dcdce2;
+    --accent: #c74d1b;
+    --paper: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: #ececf0;
+    font-size: 9.3pt;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 12px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #55555f;
+  }
+  .toolbar a { color: #17171d; border-bottom: 1px solid #c74d1b; padding-bottom: 2px; }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 24px;
+    padding: 13mm 15mm 12mm;
+    background: var(--paper);
+    box-shadow: 0 24px 70px -30px rgba(0,0,0,.45);
+  }
+
+  .name {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 33pt;
+    line-height: .96;
+    letter-spacing: -.015em;
+    font-weight: 400;
+  }
+  .role {
+    margin-top: 3mm;
+    font-size: 8.4pt;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5mm 4mm;
+    margin-top: 3.2mm;
+    font-size: 7.9pt;
+    color: var(--muted);
+  }
+  .contact a { border-bottom: 1px solid rgba(199,77,27,.35); }
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8mm;
+    padding-bottom: 4mm;
+    border-bottom: 1.5px solid var(--ink);
+  }
+  .header-right {
+    text-align: right;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 6.7pt;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--dim);
+    line-height: 1.8;
+    white-space: nowrap;
+  }
+
+  .summary {
+    margin-top: 4mm;
+    font-size: 8.9pt;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .summary strong { color: var(--ink); font-weight: 700; }
+
+  .section { margin-top: 3.4mm; }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    margin-bottom: 2.2mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7pt;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .entry { margin-bottom: 2.3mm; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4mm;
+  }
+  .entry-title { font-size: 9.2pt; font-weight: 800; letter-spacing: -.01em; }
+  .entry-title span { font-weight: 600; color: var(--muted); }
+  .entry-date {
+    flex-shrink: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 6.7pt;
+    letter-spacing: .04em;
+    color: var(--dim);
+    white-space: nowrap;
+  }
+  .entry-sub {
+    margin-top: .4mm;
+    font-size: 7.8pt;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .entry ul { margin-top: 1.1mm; }
+  .entry li {
+    position: relative;
+    padding-left: 3.2mm;
+    margin-top: .55mm;
+    font-size: 8.1pt;
+    line-height: 1.38;
+    color: var(--muted);
+  }
+  .entry li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.45mm;
+    width: 1.2mm;
+    height: 1.2mm;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .entry li strong { color: var(--ink); font-weight: 700; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 6mm;
+    align-items: start;
+  }
+
+  .skill-row {
+    display: grid;
+    grid-template-columns: 26mm 1fr;
+    gap: 3mm;
+    padding: 1.25mm 0;
+    border-bottom: 1px dotted var(--line);
+    font-size: 7.9pt;
+    line-height: 1.42;
+  }
+  .skill-row:last-child { border-bottom: 0; }
+  .skill-row dt {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 6.4pt;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding-top: .35mm;
+  }
+  .skill-row dd { color: var(--muted); }
+  .skill-row dd strong { color: var(--ink); font-weight: 700; }
+
+  .edu-degree { font-size: 8.9pt; font-weight: 800; }
+  .edu-school { margin-top: .6mm; font-size: 8pt; font-weight: 600; color: var(--muted); }
+  .edu-date {
+    margin-top: .8mm;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 6.6pt;
+    letter-spacing: .04em;
+    color: var(--dim);
+  }
+  .edu-note { margin-top: 1.6mm; font-size: 7.9pt; line-height: 1.45; color: var(--muted); }
+
+  .lead-item { margin-top: 3mm; }
+  .lead-item:first-of-type { margin-top: 0; }
+  .lead-title { font-size: 8.6pt; font-weight: 800; }
+  .lead-meta { margin-top: .3mm; font-size: 7.7pt; color: var(--muted); }
+
+  .footnote {
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid var(--line);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 6.4pt;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--dim);
+    display: flex;
+    justify-content: space-between;
+    gap: 4mm;
+  }
+
+  @page { size: A4; margin: 0; }
+
+  @media print {
+    body { background: #fff; font-size: 9.3pt; }
+    .toolbar { display: none !important; }
+    .page { width: 210mm; min-height: 297mm; margin: 0; padding: 11mm 15mm 9mm; box-shadow: none; }
+    a { color: inherit; }
+    .entry, .section { break-inside: avoid; }
+  }
+
+  @media (max-width: 780px) {
+    body { background: #fff; }
+    .page { width: 100%; min-height: 0; padding: 8mm 6mm; box-shadow: none; }
+    .header { flex-direction: column; align-items: flex-start; gap: 3mm; }
+    .header-right { text-align: left; }
+    .two-col { grid-template-columns: 1fr; gap: 4mm; }
+    .toolbar { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+  <header class="toolbar">
+    <a href="index.html">← Portfolio</a>
+    <span>Résumé · updated Nov 2026</span>
+    <a href="resume.pdf" download="Ayush_Naik_Resume.pdf">Download PDF</a>
+  </header>
+
+  <main class="page">
+    <header class="header">
+      <div>
+        <h1 class="name">Ayush Naik</h1>
+        <p class="role">AI-Assisted Product Builder · Aspiring Full-Stack Engineer</p>
+        <div class="contact">
+          <span>Hamirpur, Himachal Pradesh, India</span>
+          <a href="tel:+918219200103">+91 82192 00103</a>
+          <a href="mailto:ayu007n@gmail.com">ayu007n@gmail.com</a>
+          <a href="https://ayush007naik.github.io">ayush007naik.github.io</a>
+          <a href="https://github.com/ayush007naik">github.com/ayush007naik</a>
+          <a href="https://linkedin.com/in/ayush-naik-3298b635b">linkedin.com/in/ayush-naik-3298b635b</a>
+        </div>
+      </div>
+      <div class="header-right">
+        B.Tech 2024–2028<br>
+        NIT Hamirpur<br>
+        LeetCode /u/ayush007naik
+      </div>
+    </header>
+
+    <p class="summary">
+      <strong>B.Tech Chemical Engineering student at NIT Hamirpur</strong> who builds and ships software products. Founder of
+      <strong>Multiverse City</strong>, a local-commerce and services platform with an Android app live on Google Play and
+      6+ apps and 5+ websites built across the ecosystem. Currently a Full Stack Development Intern at Sapphire IQ.
+      Comfortable across Flutter, React, TypeScript, Supabase and Firebase, with AI-assisted development workflows.
+      Deepening C++, data structures and algorithms, and backend fundamentals.
+    </p>
+
+    <section class="section" aria-labelledby="exp">
+      <h2 class="section-title" id="exp">Experience</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Full Stack Development Intern <span>· Sapphire IQ</span></h3>
+          <span class="entry-date">Nov 2026 — Present · Remote</span>
+        </div>
+        <ul>
+          <li>Selected as a Full Stack Development Intern, contributing to practical full-stack development and real-world software solutions.</li>
+          <li>Working with JavaScript and web development across product-facing features.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Web Developer Intern <span>· InAmigos Foundation</span></h3>
+          <span class="entry-date">Oct 2026 · Remote</span>
+        </div>
+        <ul>
+          <li>Contributed to the redesign and frontend development of the foundation website with a modern UI/UX approach.</li>
+          <li>Worked on a responsive, accessible React and TypeScript build with client-side routing and image optimisation.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Founder &amp; Product Builder <span>· Multiverse City</span></h3>
+          <span class="entry-date">2026 — Present · Hamirpur</span>
+        </div>
+        <ul>
+          <li>Founded a local-commerce and services ecosystem spanning marketplace, appointments, real estate, theatre, delivery and cabs.</li>
+          <li>Built and customised <strong>6+ apps and 5+ websites</strong> using AI-assisted development workflows; set up Supabase and Firebase backends and databases.</li>
+          <li>Shipped the company website and Android app — live on Google Play. Modules are openly labelled live, built or planned.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Summer Intern — Quality Control <span>· Shiv Healthcare</span></h3>
+          <span class="entry-date">May 2026 — Jul 2026 · Baddi</span>
+        </div>
+        <ul>
+          <li>WHO-GMP-certified environment; exposure to pharmaceutical quality-control procedures and documentation.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Winter Intern — Quality Control <span>· Pharma Force Lab Unit-II</span></h3>
+          <span class="entry-date">Dec 2025 — Jan 2026 · Paonta Sahib</span>
+        </div>
+        <ul>
+          <li>Subsidiary of Mankind Pharma. Exposure to quality-control processes and practices in a regulated manufacturing environment.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="projects">
+      <h2 class="section-title" id="projects">Selected Projects</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Multiverse City — Local Commerce Ecosystem</h3>
+          <span class="entry-date">multiversecity.com · Google Play</span>
+        </div>
+        <ul>
+          <li>Flagship platform with marketplace, appointments, real estate and theatre modules live; vendor and delivery partner apps built.</li>
+          <li>Stack: Flutter, Dart, Supabase, Firebase, Firestore, Cloud Functions, React, Vite, Tailwind CSS.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">ShopSphere — Flutter E-commerce App</h3>
+          <span class="entry-date">github.com/ayush007naik/shopsphere</span>
+        </div>
+        <ul>
+          <li>Flutter and Supabase storefront with catalogue search, persistent bag, email/password auth and a clearly labelled offline demo mode.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">InAmigos Foundation — Website Redesign</h3>
+          <span class="entry-date">ayush007naik.github.io/inamigos-foundation</span>
+        </div>
+        <ul>
+          <li>Responsive React and TypeScript marketing site with client-side routing, offline support and optimised WebP imagery.</li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="two-col">
+      <section class="section" aria-labelledby="skills" style="margin-top:3.4mm">
+        <h2 class="section-title" id="skills">Skills</h2>
+        <dl>
+          <div class="skill-row"><dt>Languages</dt><dd>Dart, JavaScript, TypeScript, SQL · <strong>C++ and Python (learning)</strong></dd></div>
+          <div class="skill-row"><dt>Frontend</dt><dd>Flutter, React, Vite, Tailwind CSS, HTML/CSS, responsive UI</dd></div>
+          <div class="skill-row"><dt>Backend &amp; data</dt><dd>Supabase, Firebase, Firestore, Cloud Functions, REST APIs, PostgreSQL · <strong>Node.js/Express (learning)</strong></dd></div>
+          <div class="skill-row"><dt>AI &amp; tools</dt><dd>AI-assisted development, prompt-driven workflows, Git/GitHub, Firebase CLI, VS Code, Android Studio · <strong>N8N (learning)</strong></dd></div>
+        </dl>
+      </section>
+
+      <div>
+        <section class="section" aria-labelledby="education" style="margin-top:3.4mm">
+          <h2 class="section-title" id="education">Education</h2>
+          <p class="edu-degree">B.Tech — Chemical Engineering</p>
+          <p class="edu-school">National Institute of Technology, Hamirpur</p>
+          <p class="edu-date">2024 — 2028 (expected) · Hamirpur, HP</p>
+          <p class="edu-note">Process systems, mathematics and structured problem solving — applied to building software.</p>
+        </section>
+
+        <section class="section" aria-labelledby="leadership">
+          <h2 class="section-title" id="leadership">Leadership</h2>
+          <div class="lead-item">
+            <p class="lead-title">Pixonoids — NIT Hamirpur</p>
+            <p class="lead-meta">Executive Member · Aug 2025 — Jan 2026</p>
+            <p class="lead-meta">Volunteer · Jan 2025 — Aug 2025</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <p class="footnote">
+      <span>Portfolio: ayush007naik.github.io</span>
+      <span>References available on request</span>
+    </p>
+  </main>
+</body>
+</html>

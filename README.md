@@ -22,7 +22,7 @@ A single-page portfolio for Ayush Naik, built as a static site and deployed with
 ## Pages
 
 - **Home** — `index.html`: hero, about, selected work, skills, experience, education, milestones, résumé and contact.
-- **Case study** — `work/multiverse-city.html`: Multiverse City problem, ecosystem modules, decisions, stack and honest build status.
+- **Case study** — `work/multiverse-city.html`: Multiverse City problem, ecosystem modules, decisions, stack, five live Play Store apps and honest build status.
 - **Résumé** — `resume.html` / `resume.pdf`: one-page, recruiter-friendly PDF generated from the print-ready HTML source.
 
 ## Stack

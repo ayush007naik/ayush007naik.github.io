@@ -473,7 +473,7 @@ main { position: relative; z-index: 1; }
 .hero {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
     align-items: center;
     gap: clamp(2rem, 5vw, 4.5rem);
     min-height: 100svh;
@@ -536,8 +536,8 @@ main { position: relative; z-index: 1; }
 }
 
 .hero-avatar {
-    width: clamp(100px, 9.5vw, 136px);
-    height: clamp(100px, 9.5vw, 136px);
+    width: clamp(112px, 12vw, 176px);
+    height: clamp(112px, 12vw, 176px);
     flex: 0 0 auto;
     border-radius: 50%;
     object-fit: cover;
@@ -3462,7 +3462,7 @@ main { position: relative; z-index: 1; }
     .section-title { font-size: clamp(2.4rem, 9vw, 3.4rem); }
     .hero-name { font-size: clamp(3.15rem, 12vw, 4.6rem); }
     .hero-line { font-size: clamp(1.45rem, 5.2vw, 1.95rem); }
-    .hero-avatar { width: 88px; height: 88px; }
+    .hero-avatar { width: 104px; height: 104px; }
     .hero-school { margin-top: 0.75rem; }
 
     .float-chip-a { right: 0; top: -14px; }
@@ -3653,8 +3653,8 @@ main { position: relative; z-index: 1; }
     }
     .hero-avatar {
         order: -1;
-        width: 80px;
-        height: 80px;
+        width: 96px;
+        height: 96px;
     }
 
     .timeline::before { top: 17px; bottom: 17px; left: 17px; }

@@ -473,7 +473,7 @@ main { position: relative; z-index: 1; }
 .hero {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
     align-items: center;
     gap: clamp(2rem, 5vw, 4.5rem);
     min-height: 100svh;
@@ -483,17 +483,8 @@ main { position: relative; z-index: 1; }
 
 .hero-copy { max-width: 680px; }
 
-.hero-identity {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: clamp(1rem, 3vw, 2rem);
-    margin-top: 1.15rem;
-}
-
 .hero-title {
-    margin: 0;
-    min-width: 0;
+    margin: 1.15rem 0 0;
     font-weight: 400;
 }
 
@@ -533,18 +524,6 @@ main { position: relative; z-index: 1; }
 
 .hero-school-meta {
     color: var(--dim);
-}
-
-.hero-avatar {
-    width: clamp(112px, 12vw, 176px);
-    height: clamp(112px, 12vw, 176px);
-    flex: 0 0 auto;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 22%;
-    border: 1px solid rgba(255, 194, 122, 0.45);
-    box-shadow: 0 0 0 5px rgba(255, 122, 61, 0.06), 0 18px 45px -18px rgba(0, 0, 0, 0.9);
-    background: var(--surface);
 }
 
 .hero-line {
@@ -3462,7 +3441,6 @@ main { position: relative; z-index: 1; }
     .section-title { font-size: clamp(2.4rem, 9vw, 3.4rem); }
     .hero-name { font-size: clamp(3.15rem, 12vw, 4.6rem); }
     .hero-line { font-size: clamp(1.45rem, 5.2vw, 1.95rem); }
-    .hero-avatar { width: 104px; height: 104px; }
     .hero-school { margin-top: 0.75rem; }
 
     .float-chip-a { right: 0; top: -14px; }
@@ -3646,17 +3624,6 @@ main { position: relative; z-index: 1; }
 @media (max-width: 380px) {
     .hero-name { font-size: 2.85rem; }
     .hero-line { font-size: 1.35rem; }
-    .hero-identity {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.9rem;
-    }
-    .hero-avatar {
-        order: -1;
-        width: 96px;
-        height: 96px;
-    }
-
     .timeline::before { top: 17px; bottom: 17px; left: 17px; }
     .timeline-item { grid-template-columns: 34px minmax(0, 1fr); gap: 0.65rem; }
     .timeline-marker { width: 34px; height: 34px; font-size: 6.5px; }

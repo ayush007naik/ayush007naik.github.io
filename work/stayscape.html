@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StayScape — Airbnb Clone Case Study | Ayush Naik</title>
+    <meta name="description" content="A full-stack Airbnb-style listings and booking platform built for the Sapphire IQ capstone: React, Express, SQLite, JWT auth, overlap-safe bookings and interactive maps.">
+    <meta name="author" content="Ayush Naik">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ayush007naik.github.io/work/stayscape.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://ayush007naik.github.io/work/stayscape.html">
+    <meta property="og:title" content="StayScape — Airbnb Clone Case Study | Ayush Naik">
+    <meta property="og:description" content="A full-stack listings and booking platform: React, Express, SQLite, JWT auth, overlap-safe bookings and interactive maps.">
+    <meta property="og:image" content="https://ayush007naik.github.io/assets/work/stayscape.webp">
+    <meta property="og:site_name" content="Ayush Naik">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StayScape — Airbnb Clone Case Study | Ayush Naik">
+    <meta name="twitter:description" content="A full-stack listings and booking platform built as the Sapphire IQ capstone.">
+    <meta name="twitter:image" content="https://ayush007naik.github.io/assets/work/stayscape.webp">
+
+    <meta name="theme-color" content="#070708">
+    <meta name="color-scheme" content="dark">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" href="../assets/icons/icon-180.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "StayScape — Airbnb Clone Case Study",
+        "description": "A full-stack listings and booking platform built as the Sapphire IQ capstone: React, Express, SQLite, JWT auth, overlap-safe bookings and interactive maps.",
+        "author": {
+            "@type": "Person",
+            "name": "Ayush Naik",
+            "url": "https://ayush007naik.github.io/"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "StayScape",
+            "applicationCategory": "WebApplication"
+        },
+        "url": "https://ayush007naik.github.io/work/stayscape.html"
+    }
+    </script>
+</head>
+<body class="case-study">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-github" viewBox="0 0 24 24"><path style="fill:currentColor;stroke:none" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 5.7L20.5 7"/></symbol>
+        <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></symbol>
+        <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></symbol>
+        <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16m0 0 6-6m-6 6-6-6"/></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3m8-6 3 3-3 3M13 5l-2 14"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+    </svg>
+
+    <div class="page-grid" aria-hidden="true"></div>
+    <div class="page-glow" aria-hidden="true"><i></i><i></i></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="case-header">
+        <div class="container case-header-inner">
+            <a class="brand" href="../index.html#top">
+                <span class="brand-mark" aria-hidden="true">AN</span>
+                <span class="brand-name">Ayush Naik</span>
+            </a>
+            <div class="case-header-links">
+                <a class="case-back" href="../index.html#work">
+                    <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+                    All work
+                </a>
+                <a class="btn btn-primary btn-small" href="../resume.pdf" download="Ayush_Naik_Resume.pdf">
+                    <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+                    Résumé
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="cs-hero">
+            <div class="container">
+                <p class="section-eyebrow">Case study — 04</p>
+                <h1 class="cs-title">Book a stay.<br><em>Ship the system.</em></h1>
+                <p class="cs-lead">
+                    StayScape is a full-stack Airbnb-style platform built as the Sapphire IQ capstone.
+                    It covers the whole arc of a listings-and-booking product: a modelled backend,
+                    live search and filters, an overlap-safe booking flow, interactive maps, reviews
+                    and a role-based host dashboard — wired together with JWT auth.
+                </p>
+
+                <dl class="cs-meta">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Full-Stack Developer</dd>
+                    </div>
+                    <div>
+                        <dt>Context</dt>
+                        <dd>Sapphire IQ capstone · 5 modules</dd>
+                    </div>
+                    <div>
+                        <dt>Platform</dt>
+                        <dd>Web · React + Express</dd>
+                    </div>
+                    <div>
+                        <dt>Status</dt>
+                        <dd><span class="cs-live-dot" aria-hidden="true"></span>Built &amp; end-to-end tested · runs locally</dd>
+                    </div>
+                </dl>
+
+                <div class="cs-actions">
+                    <a class="btn btn-primary" href="#modules">
+                        Explore the modules
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+                    </a>
+                    <a class="btn btn-outline" href="#stack">
+                        Tech stack
+                        <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
+                    </a>
+                    <a class="btn btn-ghost" href="../index.html#contact">
+                        Ask me about it
+                        <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                    </a>
+                </div>
+
+                <div class="cs-shot-frame reveal">
+                    <img src="../assets/work/stayscape.webp" alt="StayScape homepage with destination search and hero section" width="1440" height="900" loading="eager" decoding="async">
+                    <div class="cs-shot-pair">
+                        <img src="../assets/work/stayscape-listings.webp" alt="StayScape listings grid with filters, property cards and ratings" width="1440" height="900" loading="lazy" decoding="async">
+                        <img src="../assets/work/stayscape-detail.webp" alt="StayScape listing detail page with image gallery, map and booking widget" width="1440" height="900" loading="lazy" decoding="async">
+                    </div>
+                    <p class="cs-caption">Search &amp; discovery · filtered listing grid · listing detail with booking</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="problem-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">01 — The brief</p>
+                    <h2 id="problem-title">A marketplace is <em>four hard problems.</em></h2>
+                    <p>An Airbnb clone is not one screen — it is auth, a data model, search, and a booking engine that must never double-book. The capstone framed it as five modules; the real work was making them behave as one system.</p>
+                </div>
+
+                <div class="cs-grid-3">
+                    <article class="cs-card reveal">
+                        <span class="mono-label">The traveller</span>
+                        <h3>Find and book fast</h3>
+                        <p>Search by destination, filter by type, price and capacity, compare ratings, then reserve available dates without the UI lying about what is free.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <span class="mono-label">The host</span>
+                        <h3>Run the business</h3>
+                        <p>Hosts need their own surface: publish and edit listings, see incoming bookings and guest details, and track revenue and ratings at a glance.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <span class="mono-label">The constraint</span>
+                        <h3>One person, one system</h3>
+                        <p>A single developer had to deliver the backend, the connected frontend, the booking logic, maps, reviews and deployment — with no room for unverified claims.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="ecosystem-title" id="modules">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">02 — The modules</p>
+                    <h2 id="ecosystem-title">Five modules, <em>one product.</em></h2>
+                    <p>Each capstone module is implemented and verified. The table maps the brief to what actually shipped in the build.</p>
+                </div>
+
+                <div class="cs-table-wrap reveal">
+                    <table class="cs-table">
+                        <caption class="sr-only">StayScape modules and their build status</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Module</th>
+                                <th scope="col">What it does</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Backend foundation</th>
+                                <td>Data model for users, listings, bookings and reviews; CRUD APIs; JWT auth and role middleware.</td>
+                                <td><span class="status is-built">Built</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Listings &amp; search</th>
+                                <td>Live listing grid with destination search, type/price/capacity filters, sorting, pagination and loading/empty states.</td>
+                                <td><span class="status is-built">Built</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Booking flow</th>
+                                <td>Date selection, availability checks and server-side overlap validation that prevents double-bookings.</td>
+                                <td><span class="status is-built">Built</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Maps, reviews &amp; dashboard</th>
+                                <td>Leaflet maps, a review system with average-rating aggregation, and a host dashboard for listings, bookings and stats.</td>
+                                <td><span class="status is-built">Built</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Deployment &amp; polish</th>
+                                <td>Production build served by the API as a single service, environment-based config, responsive layout and image fallbacks.</td>
+                                <td><span class="status is-built">Built</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="decisions-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">03 — Key decisions</p>
+                    <h2 id="decisions-title">Decisions that made it <em>hold together.</em></h2>
+                    <p>The interesting parts of a booking platform are the rules behind the screens. These are the choices that mattered most.</p>
+                </div>
+
+                <div class="cs-grid-2">
+                    <article class="cs-card reveal">
+                        <span class="cs-num">01</span>
+                        <h3>Validate availability on the server</h3>
+                        <p>Overlaps are rejected with a half-open interval rule — <code>existing.in &lt; new.out &amp;&amp; existing.out &gt; new.in</code> — excluding cancelled stays. The UI checks too, but the database is the source of truth.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <span class="cs-num">02</span>
+                        <h3>Model everything before the UI</h3>
+                        <p>Users, listings, bookings and reviews were designed first, with keys and constraints. Every screen is a read or write against that model, so the frontend never had to invent structure.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <span class="cs-num">03</span>
+                        <h3>Roles gate the write paths</h3>
+                        <p>JWT tokens carry the user’s role. Guests can book and review; only hosts can publish listings, and only the owner can edit or delist their own. Authorisation lives in middleware, not just buttons.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 180ms">
+                        <span class="cs-num">04</span>
+                        <h3>Zero-setup, swappable data layer</h3>
+                        <p>The brief allowed MongoDB or PostgreSQL. I used Node’s built-in SQLite so the project runs with no database server, while keeping the schema clean enough to port to Mongoose or Sequelize.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="build-title" id="stack">
+            <div class="container">
+                <div class="cs-split">
+                    <div class="cs-split-copy">
+                        <div class="cs-section-head">
+                            <p class="section-eyebrow">04 — What I built</p>
+                            <h2 id="build-title">The full stack, <em>wired end to end.</em></h2>
+                            <p>I built the Express API and its data model, then the React frontend that consumes it — auth, search, booking, maps, reviews and the host dashboard — and verified the flows in a real browser.</p>
+                        </div>
+
+                        <ul class="cs-list">
+                            <li>Designed a normalised schema for users, listings, bookings and reviews, with constraints and indexes.</li>
+                            <li>Built REST APIs for auth, listing CRUD, search/filter, availability, bookings, reviews and host statistics.</li>
+                            <li>Implemented JWT authentication with bcrypt hashing and role-based authorisation for guest and host accounts.</li>
+                            <li>Built a responsive React app with routing, auth context, filters, a booking widget, Leaflet maps and a host dashboard.</li>
+                            <li>Seed data, demo accounts, and end-to-end browser tests covering login, booking, reviews and listing creation.</li>
+                        </ul>
+
+                        <div class="cs-stack">
+                            <span class="mono-label">Stack</span>
+                            <ul>
+                                <li>React</li><li>Vite</li><li>React Router</li><li>Express</li><li>Node.js</li><li>SQLite</li><li>JWT</li><li>bcrypt</li><li>Leaflet</li><li>OpenStreetMap</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <aside class="cs-aside reveal">
+                        <span class="mono-label">At a glance</span>
+                        <dl class="cs-facts">
+                            <div><dt>Capstone modules</dt><dd>5</dd></div>
+                            <div><dt>Core entities</dt><dd>4</dd></div>
+                            <div><dt>User roles</dt><dd>2</dd></div>
+                            <div><dt>Seeded listings</dt><dd>9</dd></div>
+                        </dl>
+                        <p class="cs-aside-note">A local, verified build. No revenue or user metrics are claimed — the value here is the engineering.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="status-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">05 — Status</p>
+                    <h2 id="status-title">What is true <em>today.</em></h2>
+                    <p>This is an engineering capstone, not a launched marketplace. Here is exactly what exists and what would come next.</p>
+                </div>
+
+                <div class="cs-grid-3">
+                    <article class="cs-card cs-card-accent reveal">
+                        <span class="mono-label">Verified now</span>
+                        <h3>All core flows</h3>
+                        <ul class="cs-mini-list">
+                            <li>Register, log in and load a session</li>
+                            <li>Search, filter and open listings</li>
+                            <li>Book available dates and block overlaps</li>
+                            <li>Cancel a trip and leave a review</li>
+                            <li>Host creates, edits and delists a listing</li>
+                        </ul>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <span class="mono-label">Shipped as</span>
+                        <h3>A single runnable app</h3>
+                        <ul class="cs-mini-list">
+                            <li>Node 22.5+ · no database server required</li>
+                            <li>Seed script with demo accounts</li>
+                            <li>Production build served with the API</li>
+                            <li>Runs locally with two npm commands</li>
+                        </ul>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <span class="mono-label">Next</span>
+                        <h3>Production polish</h3>
+                        <ul class="cs-mini-list">
+                            <li>Deploy the API and client publicly</li>
+                            <li>Image uploads and a booking calendar</li>
+                            <li>Payments and host payouts</li>
+                            <li>PostgreSQL with migrations</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section" aria-labelledby="lessons-title">
+            <div class="container">
+                <div class="cs-section-head">
+                    <p class="section-eyebrow">06 — Lessons</p>
+                    <h2 id="lessons-title">What a booking engine <em>taught me.</em></h2>
+                </div>
+
+                <div class="cs-grid-2">
+                    <article class="cs-card reveal">
+                        <h3>State that matters belongs on the server</h3>
+                        <p>Client-side checks make the UI feel considerate, but only the server can guarantee correctness. Moving overlap validation into the API made the whole booking flow trustworthy.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 60ms">
+                        <h3>Roles are an architecture decision</h3>
+                        <p>Guests and hosts see different surfaces, but they share one identity system. Deciding where authorisation lives early kept the routes, UI and data consistent.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 120ms">
+                        <h3>Pragmatism still needs a clean seam</h3>
+                        <p>SQLite removed operational friction, but the schema and query layer are isolated so the database can be swapped without rewriting the product.</p>
+                    </article>
+                    <article class="cs-card reveal" style="--d: 180ms">
+                        <h3>Verify flows, not just screens</h3>
+                        <p>A page can render and still be broken. Walking the real journeys — login, book, review, publish — is what turned a set of features into a working platform.</p>
+                    </article>
+                </div>
+
+                <div class="cs-cta reveal">
+                    <div>
+                        <span class="mono-label">Want a walkthrough?</span>
+                        <h3>Happy to demo it live.</h3>
+                        <p>The full build runs locally — I can walk through the API, the data model and the booking logic.</p>
+                    </div>
+                    <div class="cs-cta-actions">
+                        <a class="btn btn-primary" href="../index.html#contact">
+                            Get in touch
+                            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                        </a>
+                        <a class="btn btn-outline" href="../index.html#work">
+                            All projects
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-section cs-next" aria-labelledby="next-title">
+            <div class="container cs-next-inner">
+                <div>
+                    <p class="section-eyebrow">Next</p>
+                    <h2 id="next-title">Back to the <em>work.</em></h2>
+                    <p>More projects, the full experience timeline and an honest skills breakdown.</p>
+                </div>
+                <div class="cs-next-actions">
+                    <a class="btn btn-outline" href="../index.html#work">
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+                        All projects
+                    </a>
+                    <a class="btn btn-primary" href="../index.html#contact">
+                        Start a conversation
+                        <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-mark">AN</span>
+                <div>
+                    <p>Ayush Naik</p>
+                    <span>AI-assisted product builder · Founder of Multiverse City</span>
+                </div>
+            </div>
+            <p class="footer-note">Designed &amp; built by Ayush Naik. © <span id="year">2026</span></p>
+            <a class="back-to-top" href="#main" aria-label="Back to top">
+                Back to top
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+</html>
